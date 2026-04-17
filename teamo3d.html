@@ -96,7 +96,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      flex-wrap: nowrap;
       gap: 0.4em;
       justify-content: center;
       width: 95vw;
@@ -119,6 +120,14 @@
     .word {
       display: inline-flex;
       white-space: nowrap;
+    }
+
+    .line {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      gap: 0.4em;
     }
 
     .mensaje span {
@@ -204,9 +213,13 @@
     <canvas id="bg-canvas"></canvas>
     <div class="mensaje">
         <!-- followers -->
-        <div class="word"><span>T</span><span>E</span></div>
-        <div class="word"><span>A</span><span>M</span><span>O</span></div>
-        <div class="word tiny"><span>M</span><span>I</span><span>&nbsp;</span><span>P</span><span>R</span><span>I</span><span>N</span><span>C</span><span>E</span><span>S</span><span>I</span><span>T</span><span>A</span></div>
+        <div class="line">
+          <div class="word"><span>T</span><span>E</span></div>
+          <div class="word"><span>A</span><span>M</span><span>O</span></div>
+        </div>
+        <div class="line">
+          <div class="word tiny"><span>M</span><span>I</span><span>&nbsp;</span><span>P</span><span>R</span><span>I</span><span>N</span><span>C</span><span>E</span><span>S</span><span>I</span><span>T</span><span>A</span></div>
+        </div>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
